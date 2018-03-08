@@ -1,0 +1,26 @@
+ Must Have's for full credit:
+
+     1. Make sure to include Doc box on top of each .java file
+
+     2. And make sure you document/comment your code in order to receive full credit.
+
+     3. IPO chart and Algorithm required for each lab, otherwise points will be deducted. (.doc or .docx file only please)
+
+<<<   Note: typing up the code from textbook without adding any comments or doc box, will be considered
+
+          incomplete assignment >>>
+
+Week 7 - Tuesday Lab Assignments
+           Complete any incomplete assignments from Week 6.
+ 
+
+Week 7 - Thursday Lab Assignments
+Java Text: (Doc box and Comments along with IPO chart and algorithm needed, for full credit)
+
+Create a IPO chart and Algorithm for following programs and code it:
+
+                        (Need your .java files as well as .doc or .docx files)
+
+Page: 133 – Display 3.7 - WhileDemo
+Page:136 – Display 3.8 - Averager
+Page: 161 – Display 3.11 - CoinflipDemo
