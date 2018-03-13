@@ -31,8 +31,8 @@ public class CalculatorPartTwo
 			
 			//Prompt the user for a selection
 			System.out.println("Please make a selectoin");
-			//Set selection to be the next user inputted variable
-			selection = keyboard.next().charAt(0);
+			//Set selection to be the next user inputted character
+			selection = keyboard.next().toUpperCase().charAt(0);
 			
 			//Runs the calculatoin code if selectoin is A,B,C or D
 			if((selection == 'A')||(selection == 'B')||(selection == 'C')||(selection == 'D')){
