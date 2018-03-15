@@ -23,5 +23,4 @@ public class DateThirdTryDemo {
 		//Writes the date out by calling the writeOutput method
 		date.writeOutput();
 	}
-	
 }
