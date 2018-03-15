@@ -1,3 +1,15 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: DateSecondTry.java
+
+* Programmer Name: Thomas Godden
+
+* Description: A class that contains date reading, writing and interpreting method
+
+* Date: 3/15/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
 import java.util.Scanner;
 
 public class DateSecondTry {
