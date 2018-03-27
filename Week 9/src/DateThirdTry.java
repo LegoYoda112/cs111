@@ -6,7 +6,7 @@
 
 * Description: A class that contains date reading, writing and interpreting methods
 
-* Date: 3/15/2018
+* Date: 3/27/2018
 
 ---------------------------------------------------------------------------------------------------------------*/
 
