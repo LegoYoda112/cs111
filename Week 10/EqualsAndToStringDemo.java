@@ -1,3 +1,16 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: EqualsAndToStringDemo.java
+
+* Programmer Name: Thomas Godden
+
+* Description: To demonstrate the methods we wrote in DateFourthTry
+
+* Date: 3/29/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
+
 //Defines the EqualsAndToStringDemo
 public class EqualsAndToStringDemo
 {
