@@ -1,3 +1,16 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: Bill.java
+
+* Programmer Name: Thomas Godden
+
+* Description: A class that contains methods to figure out the bill of the user and display it
+
+* Date: 3/29/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
+
 //Imports the scanner class
 import java.util.Scanner;
 

@@ -1,3 +1,16 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: BillingDialog.java
+
+* Programmer Name: Thomas Godden
+
+* Description: To demo the bill class we created
+
+* Date: 3/29/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
+
 //Defines the BillingDialog class
 public class BillingDialog
 {
