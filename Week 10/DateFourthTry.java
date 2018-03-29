@@ -19,16 +19,21 @@ public class DateFourthTry {
 	private int day;
 	private int year;
 	
+	//Defines the toString method
 	public String toString()
 	{
+		//Returns "[month] [day], [year]"
 		return(month + " " + day + ", " + year);
 	}
 	
+	//Defines the equals class
 	public boolean equals(DateFourthTry otherDate){
+		//Return a boolean value depending on if the date equals otherDate
 		return((month.equals(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
 	}
 	
 	public boolean precedes(DateFourthTry otherDate){
+		//Return a boolean value depending on if the date is before otherDate
 		return( (year<otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day<otherDate.day) );
 	}
 	
