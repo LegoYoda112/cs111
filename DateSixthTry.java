@@ -13,11 +13,39 @@
 //imports scanner
 import java.util.Scanner;
 
-public class DateFifthTry {
+public class DateSixthTry {
 	//Declares variables
 	private String month;
 	private int day;
 	private int year;
+	
+	//Sets the objects month day and year given those inputs
+	public void setDate(int month, int date, int year){
+		if (dateOK(month, date, year)){
+			this.month = monthString(month);
+			this.day = day;
+			this.year = year;
+		}else{
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}
+	}
+	
+	public void setDate(String monthString, int date, int year){
+		if (dateOK(month, date, year)){
+			this.month = monthString;
+			this.day = day;
+			this.year = year;
+		}else{
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}
+	}
+	
+	public void setDate(int year){
+		setDate(1,1,year);
+	}
+	
 	
 	//Prints the month day and year
 	public void writeOutput(){
@@ -43,18 +71,24 @@ public class DateFifthTry {
 		}
 	}
 	
-	//Sets the objects month day and year given those inputs
-	public void setDate(int month, int date, int year){
-		if (dateOK(month, date, year)){
-			this.month = monthString(month);
-			this.day = day;
-			this.year = year;
-		}else{
-			System.out.println("Fatal Error");
-			System.exit(0);
-		}
+	//Checks if the date is in an expected format using an integer month and returns a boolean
+	private boolean dateOK(int monthInt, int dayInt, int yearInt){
+		return (((monthInt >=1)&&(monthInt<=12)) && ((dayInt >=1)&&(dayInt<=31)) && ((yearInt >=1000)&&(yearInt<=9999)));
 	}
 	
+	//Checks if the date is in an expected format using a String month and returns a boolean
+	private boolean dateOK(String monthString, int dayInt, int yearInt){
+		return (monthOK(monthString) && ((dayInt >=1)&&(dayInt<=31)) && ((yearInt >=1000)&&(yearInt<=9999)));
+	}
+	
+	//Checks if the month is in an expected format and returns a boolean
+	private boolean monthOK (String month){
+		return(month.equals("January")||month.equals("Febuary")||
+		month.equals("March")||month.equals("April")||month.equals("June")||
+		month.equals("July")||month.equals("August")||month.equals("September")||
+		month.equals("October")||month.equals("November")||month.equals("December"));
+		
+	}
 	//Checks if the month is in an expected range and then sets it
 	public void setMonth(int monthNumber){
 		if((monthNumber <=0)|| (monthNumber > 12)){
@@ -91,12 +125,12 @@ public class DateFifthTry {
 	}
 	
 	//Defines the equals class
-	public boolean equals(DateFifthTry otherDate){
+	public boolean equals(DateSixthTry otherDate){
 		//Return a boolean value depending on if the date equals otherDate
 		return((month.equalsIgnoreCase(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
 	}
 	
-	public boolean precedes(DateFifthTry otherDate){
+	public boolean precedes(DateSixthTry otherDate){
 		//Return a boolean value depending on if the date is before otherDate
 		return( (year<otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day<otherDate.day) );
 	}
@@ -136,11 +170,6 @@ public class DateFifthTry {
 			System.exit(0);
 			return "Error";
 		}
-	}
-	
-	//Checks if the date is in an expected format and returns a boolean
-	private boolean dateOK(int monthInt, int dayInt, int yearInt){
-		return (((monthInt >=1)&&(monthInt<=12)) && ((dayInt >=1)&&(monthInt<=31)) && ((yearInt >=1000)&&(yearInt<=9999)));
 	}
 	
 	//Defines the getDay method
