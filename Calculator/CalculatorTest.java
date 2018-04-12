@@ -1,12 +1,12 @@
 /*------------------------------------------------------------------------------------------------------------
 
-* Program Name: CalculatorPartTwo.java
+* Program Name: CalculatorTest.java
 
 * Programmer Name: Thomas Godden
 
-* Description: To gain some practice using loops and switch structures
+* Description: To test the calculator class
 
-* Date: 3/12/2018
+* Date: 4/11/2018
 
 ---------------------------------------------------------------------------------------------------------------*/
 
@@ -18,6 +18,8 @@ public class CalculatorTest
 {
 	//Define the main method
 	public static void main(String args[]){
+		
+		Calculator calc = new Calculator();
 		
 		//Initialize variables
 		double num1, num2;
@@ -50,13 +52,13 @@ public class CalculatorTest
 				//Display the calculated result of num1 and num2 depending on the selectoin and exits if the user enters 'X'
 				switch (selection)
 				{
-					case 'A': System.out.println(num1 + " + " + num2 + " = " + (num1+num2));
+					case 'A': System.out.println(calc.add(num1,num2));
 							break;
-					case 'B': System.out.println(num1 + " - " + num2 + " = " + (num1-num2));
+					case 'B': System.out.println(calc.subtract(num1,num2));
 							break;
-					case 'C': System.out.println(num1 + " x " + num2 + " = " + (num1*num2));
+					case 'C': System.out.println(calc.multiply(num1,num2));
 							break;
-					case 'D': System.out.println(num1 + " ÷ " + num2 + " = " + (num1/num2));
+					case 'D': System.out.println(calc.divide(num1,num2));
 							break;
 				}
 				

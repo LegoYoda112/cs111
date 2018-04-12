@@ -4,7 +4,7 @@
 
 * Programmer Name: Thomas Godden
 
-* Description: To gain some practice using loops and switch structures
+* Description: Performs selected calculatoins given two input doubles
 
 * Date: 4/11/2018
 
