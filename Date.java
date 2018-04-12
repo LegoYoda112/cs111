@@ -1,23 +1,58 @@
 /*------------------------------------------------------------------------------------------------------------
 
-* Program Name: DateSixthTry.java
+* Program Name: Date.java
 
 * Programmer Name: Thomas Godden
 
 * Description: A class that contains date reading, writing and interpreting methods
 
-* Date: 4/3/2018
+* Date: 4/9/2018
 
 ---------------------------------------------------------------------------------------------------------------*/
 
-//imports scanner
 import java.util.Scanner;
 
-public class DateSixthTry {
+public class Date{
 	//Declares variables
 	private String month;
 	private int day;
 	private int year;
+	
+	public Date(){
+		month = "January";
+		day = 1;
+		year = 1000;
+	}
+	
+	//Constructor taking all integers
+	public Date(int monthInt, int day, int year){
+		setDate(monthInt, day, year);
+	}
+	
+	
+	//Constructor taking a month string and two integers
+	public Date(String monthString, int day, int year){
+		setDate(monthString, day, year);
+	}
+	
+	
+	//Constructor taking just a year
+	public Date(int year){
+		setDate(1,1, year);
+	}
+	
+	//Constructor taking another date
+	public Date (Date aDate){
+		if (aDate == null)
+		{
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}
+		
+		month = aDate.month;
+		day = aDate.day;
+		year = aDate.year;
+	}
 	
 	//Sets the objects month day and year given those inputs
 	public void setDate(int month, int day, int year){
@@ -30,7 +65,6 @@ public class DateSixthTry {
 			System.exit(0);
 		}
 	}
-	
 	//Sets the objects month day and year given those inputs
 	public void setDate(String monthString, int day, int year){
 		if (dateOK(monthString, day, year)){
@@ -48,10 +82,94 @@ public class DateSixthTry {
 		setDate(1,1,year);
 	}
 	
+	//Checks if the year is in an expected range and then sets it
+	public void setYear(int year){
+		if((year<=1000) || (year>9999)){
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}else
+			this.year = year;
+	}
 	
-	//Prints the month day and year
-	public void writeOutput(){
-		System.out.println(month + " " + day + ", " + year);
+	//Checks if the month is in an expected range and then sets it
+	public void setMonth(int monthNumber){
+		if((monthNumber <=0)|| (monthNumber > 12)){
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}else{
+			month = monthString(monthNumber);
+		}
+	}
+	
+	//Checks if the day is in an expected range and then sets it
+	public void setDay(int day){
+		if((day<=0) || (day>31)){
+			System.out.println("Fatal Error");
+			System.exit(0);
+		}else
+			this.day = day;
+	}
+	
+	//Defines the getMonth method
+	public int getMonth(){
+		//Depending on the month name, return the month number
+		if(month.equalsIgnoreCase("January")){
+			return 1;
+		}else if(month.equalsIgnoreCase("February")){
+			return 2;
+		}else if(month.equalsIgnoreCase("March")){
+			return 1;
+		}else if(month.equalsIgnoreCase("April")){
+			return 1;
+		}else if(month.equalsIgnoreCase("June")){
+			return 1;
+		}else if(month.equalsIgnoreCase("July")){
+			return 1;
+		}else if(month.equalsIgnoreCase("August")){
+			return 1;
+		}else if(month.equalsIgnoreCase("September")){
+			return 1;
+		}else if(month.equalsIgnoreCase("October")){
+			return 1;
+		}else if(month.equalsIgnoreCase("November")){
+			return 1;
+		}else if(month.equalsIgnoreCase("December")){
+			return 12;
+		}else{ 
+			//If month is not equal to any of our defined months then print fatal error and exit
+			System.out.println("Fatal error");
+			System.exit(0);
+			return 0;
+		}
+	}
+	
+	//Defines the getDay method
+	public int getDay(){
+		//returns day
+		return day;
+	}
+	
+	//Defines the getYear method
+	public int getYear(){
+		//returns year
+		return year;
+	}
+	
+	//Defines the toString method
+	public String toString()
+	{
+		//Returns "[month] [day], [year]"
+		return(month + " " + day + ", " + year);
+	}
+	
+	//Return a boolean value depending on if the date equals otherDate
+	public boolean equals(Date otherDate){
+		return((month.equals(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
+	}
+	
+	//Return a boolean value depending on if the date is before otherDate
+	public boolean precedes(Date otherDate){
+		return((year<otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day<otherDate.day) );
 	}
 	
 	//Prompts the user for a date and assigns the input to month, day and year
@@ -91,52 +209,6 @@ public class DateSixthTry {
 		month.equals("October")||month.equals("November")||month.equals("December"));
 		
 	}
-	//Checks if the month is in an expected range and then sets it
-	public void setMonth(int monthNumber){
-		if((monthNumber <=0)|| (monthNumber > 12)){
-			System.out.println("Fatal Error");
-			System.exit(0);
-		}else{
-			month = monthString(monthNumber);
-		}
-	}
-	
-	//Checks if the day is in an expected range and then sets it
-	public void setDay(int day){
-		if((day<=0) || (day>31)){
-			System.out.println("Fatal Error");
-			System.exit(0);
-		}else
-			this.day = day;
-	}
-	
-	//Checks if the year is in an expected range and then sets it
-	public void setYear(int year){
-		if((year<=1000) || (year>9999)){
-			System.out.println("Fatal Error");
-			System.exit(0);
-		}else
-			this.year = year;
-	}
-	
-	//Defines the toString method
-	public String toString()
-	{
-		//Returns "[month] [day], [year]"
-		return(month + " " + day + ", " + year);
-	}
-	
-	
-	public boolean equals(DateSixthTry otherDate){
-		//Return a boolean value depending on if the date equals otherDate
-		return((month.equalsIgnoreCase(otherDate.month)) && (day == otherDate.day) && (year == otherDate.year));
-	}
-	
-	public boolean precedes(DateSixthTry otherDate){
-		//Return a boolean value depending on if the date is before otherDate
-		return( (year<otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day<otherDate.day) );
-	}
-	
 	
 	//Defines the monthString method, with parameter monthNumber
 	public String monthString(int monthNumber){
@@ -171,51 +243,6 @@ public class DateSixthTry {
 			System.out.println("Fatal error");
 			System.exit(0);
 			return "Error";
-		}
-	}
-	
-	//Defines the getDay method
-	public int getDay(){
-		//returns day
-		return day;
-	}
-	
-	//Defines the getYear method
-	public int getYear(){
-		//returns year
-		return year;
-	}
-	
-	//Defines the getMonth method
-	public int getMonth(){
-		//Depending on the month name, return the month number
-		if(month.equalsIgnoreCase("January")){
-			return 1;
-		}else if(month.equalsIgnoreCase("February")){
-			return 2;
-		}else if(month.equalsIgnoreCase("March")){
-			return 1;
-		}else if(month.equalsIgnoreCase("April")){
-			return 1;
-		}else if(month.equalsIgnoreCase("June")){
-			return 1;
-		}else if(month.equalsIgnoreCase("July")){
-			return 1;
-		}else if(month.equalsIgnoreCase("August")){
-			return 1;
-		}else if(month.equalsIgnoreCase("September")){
-			return 1;
-		}else if(month.equalsIgnoreCase("October")){
-			return 1;
-		}else if(month.equalsIgnoreCase("November")){
-			return 1;
-		}else if(month.equalsIgnoreCase("December")){
-			return 12;
-		}else{ 
-			//If month is not equal to any of our defined months then print fatal error and exit
-			System.out.println("Fatal error");
-			System.exit(0);
-			return 0;
 		}
 	}
 }
