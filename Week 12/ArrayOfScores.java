@@ -1,3 +1,14 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: ArrayOfScores.java
+
+* Programmer Name: Thomas Godden
+
+* Description: Gets 5 scores and displays the highest and the difference from the highest
+
+* Date: 4/14/2018
+
+---------------------------------------------------------------------------------------------------------------*/
 
 //Imports the scanner
 import java.util.Scanner;

@@ -1,3 +1,15 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: Array5A.java
+
+* Programmer Name: Thomas Godden
+
+* Description: Sets and then outputs 4 elements of an array
+
+* Date: 4/14/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
 public class Array5A{
 	public static void main(String[] args){
 		//Creates a salary array with four elements

@@ -1,3 +1,14 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: PassFail.java
+
+* Programmer Name: Thomas Godden
+
+* Description: Tells how many students passed or failed a test depending on their scores
+
+* Date: 4/14/2018
+
+---------------------------------------------------------------------------------------------------------------*/
 
 //Imports scanner
 import java.util.Scanner;

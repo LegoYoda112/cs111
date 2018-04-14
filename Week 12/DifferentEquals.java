@@ -1,3 +1,15 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: DifferentEquals.java
+
+* Programmer Name: Thomas Godden
+
+* Description:Showing the difference in checking equality of arrays
+
+* Date: 4/14/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
 
 public class DifferentEquals{
 	public static void main(String[] args){
