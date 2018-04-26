@@ -13,7 +13,7 @@ public class Event5C{
 	public static void main(String args[]){
 		//Array of events
 		Event[] someEvents = new Event[5];
-		char x = 'c';
+		char x = 'x';
 		
 		//Loops through someEvents and populates the array
 		for(int i = 0; i<5; i++){
