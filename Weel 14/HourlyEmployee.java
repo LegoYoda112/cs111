@@ -58,10 +58,10 @@ public class HourlyEmployee extends Employee{
 	}
 	
 	public String toString(){
-		return (getName() + " " + getHireDate().toString() + "\n$" + wageRate + " per hour for " + hours + " hours"));
+		return (getName() + " " + getHireDate().toString() + "\n$" + wageRate + " per hour for " + hours + " hours");
 	}
 	
 	public boolean equals(HourlyEmployee other){
-		return(getName.equals(other.getName()) && )
+		return (getName().equals(other.getName()) && getHireDate().equals(other.getHireDate()) && wageRate == other.wageRate && hours == other.hours);
 	}
 }
