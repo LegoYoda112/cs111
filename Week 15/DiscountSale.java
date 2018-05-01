@@ -1,3 +1,16 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: DiscountSale.java
+
+* Programmer Name: Thomas Godden
+
+* Description: A class for storing and manipulating discount sales, extends sale
+
+* Date: 5/1/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
+
 //Discount sale class
 public class DiscountSale extends Sale{
 	//Discount variable

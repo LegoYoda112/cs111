@@ -1,3 +1,16 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: LateBindingDemo.java
+
+* Programmer Name: Thomas Godden
+
+* Description: A demonstratoin of polymorphism
+
+* Date: 5/1/2018
+
+---------------------------------------------------------------------------------------------------------------*/
+
+
 //Driver class for Sale and DiscountSale
 public class LateBindingDemo{
 	public static void main(String[] args){

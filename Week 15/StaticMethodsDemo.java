@@ -1,3 +1,14 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: StaticMethodsDemo.java
+
+* Programmer Name: Thomas Godden
+
+* Description: Shows what happens when you call a static method under various cases
+
+* Date: 5/1/2018
+
+---------------------------------------------------------------------------------------------------------------*/
 
 //Driver class for Sale and DiscountSale
 public class StaticMethodsDemo{

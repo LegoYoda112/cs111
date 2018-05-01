@@ -1,3 +1,14 @@
+/*------------------------------------------------------------------------------------------------------------
+
+* Program Name: Sale.java
+
+* Programmer Name: Thomas Godden
+
+* Description: A class for storing and manipulating sales
+
+* Date: 5/1/2018
+
+---------------------------------------------------------------------------------------------------------------*/
 
 //Sale class
 public class Sale{
