@@ -13,12 +13,17 @@ import java.util.Scanner;
 
 public class Event5D{
 	
+	//Rate constants
 	public static final double CORP_RATE = 75.99;
 	public static final double PRI_RATE = 47.99;
 	public static final double NON_PROF_RATE = 40.99;
 	
 	public static void main(String args[]){
+		
+		//Scanner
 		Scanner scan = new Scanner(System.in);
+		
+		//Event and rate variables
 		char event = ' ';
 		double rate = 0;
 		

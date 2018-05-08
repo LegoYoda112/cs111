@@ -1,12 +1,12 @@
 /*------------------------------------------------------------------------------------------------------------
 
-* Program Name: Event5Djava
+* Program Name: SalesData.java
 
 * Programmer Name: Thomas Godden
 
 * Description: Creates an array of events and prints out its contents
 
-* Date: 5/1/2018
+* Date: 5/7/2018
 
 ---------------------------------------------------------------------------------------------------------------*/
 
