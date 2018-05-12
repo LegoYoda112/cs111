@@ -80,4 +80,25 @@ public class Pen{
 		
 		return returnString;
 	}
+	
+	public boolean hasCarnivorous(){
+		for(Animal1 animal : animals){
+			if(animal.isCarnivorous()){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public ArrayList<Animal1>  getNonCarnivorous(){
+		ArrayList<Animal1> nonCarnivores = new ArrayList<Animal1>();
+		
+		for(Animal1 animal : animals){
+			if(!animal.isCarnivorous()){
+				nonCarnivores.add(animal);
+			}
+		}
+		
+		return nonCarnivores;
+	}
 }
