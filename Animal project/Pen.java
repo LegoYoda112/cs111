@@ -24,7 +24,7 @@ public class Pen{
 		if(isSpaceFor(animal)){
 			animals.add(animal);
 		}else{
-			System.out.println("Error, trying to add an animal to a full pen");
+			System.out.println("Error, trying to add an animal to a full pen, exiting");
 			System.exit(0);
 		}
 	}
@@ -87,6 +87,23 @@ public class Pen{
 				return true;
 			}
 		}
+		return false;
+	}
+	
+	public boolean hasNonCarnivorous(){
+		for(Animal1 animal : animals){
+			if(!animal.isCarnivorous()){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean hasConflict(){
+		if(hasCarnivorous() && hasNonCarnivorous()){
+			return true;
+		}
+		
 		return false;
 	}
 	

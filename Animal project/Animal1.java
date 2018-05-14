@@ -36,6 +36,10 @@ public abstract class Animal1{
 		return animalSize;
 	}
 	
+	public String getSpecies(){
+		return animalSpecies;
+	}
+	
 	public boolean isAMammal(){
 		return true;
 	}
